@@ -100,7 +100,7 @@ class ParallaxImage extends React.Component<Props, State> {
     }
 
     var content = (
-      <Animated.View
+      <View
         ref={component => (this._container = component)}
         style={[style, styles.container]}
         onLayout={this.handleLayout}
@@ -111,7 +111,7 @@ class ParallaxImage extends React.Component<Props, State> {
           pointerEvents="none"
         />
         <View style={[styles.overlay, overlayStyle]}>{children}</View>
-      </Animated.View>
+      </View>
     )
     // Since we can't allow nested Parallax.Images, we supply this shorthand to wrap a touchable
     // around the element
